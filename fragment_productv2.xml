@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText android:id="@+id/etSku" android:hint="SKU" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etName" android:hint="Product Name" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etQuantity" android:hint="Quantity" android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etRackCode" android:hint="Rack Code" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/etRackSlot" android:hint="Rack Slot" android:inputType="number" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Spinner android:id="@+id/spinnerPackage" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <CheckBox android:id="@+id/cbGift" android:text="Gift" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btnAddProduct" android:text="Add Product" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
