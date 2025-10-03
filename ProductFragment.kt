@@ -1,13 +1,13 @@
-import android.widget.*
-import android.view.*
-import android.os.Bundle
-import androidx.fragment.app.Fragment
+package com.mehmet.wmsapp.ui
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.mehmet.wmsapp.R
+import com.mehmet.wmsapp.data.Product
 
 class ProductFragment : Fragment() {
 
@@ -35,7 +35,8 @@ class ProductFragment : Fragment() {
 
         // Spinner için örnek paket türleri
         val packageOptions = arrayOf("Küçük", "Orta", "Büyük")
-        spinnerPackage.adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, packageOptions)
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, packageOptions)
+        spinnerPackage.adapter = adapter
 
         btnAddProduct.setOnClickListener {
             val product = Product(
@@ -47,10 +48,12 @@ class ProductFragment : Fragment() {
                 packageType = spinnerPackage.selectedItem.toString(),
                 isGift = cbGift.isChecked
             )
+
             Toast.makeText(requireContext(), "Ürün eklendi:\n$product", Toast.LENGTH_LONG).show()
+
+            // TODO: Firebase'e gönderme veya listeye ekleme işlemi burada yapılabilir
         }
 
         return view
     }
 }
-
