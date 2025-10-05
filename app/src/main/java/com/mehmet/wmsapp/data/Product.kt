@@ -1,3 +1,5 @@
+package com.mehmet.wmsapp.data
+
 data class Product(
     val sku: String,
     val name: String,
@@ -7,4 +9,3 @@ data class Product(
     val packageType: String,
     val isGift: Boolean
 )
-
