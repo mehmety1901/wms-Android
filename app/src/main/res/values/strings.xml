@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WMS App</string>
+    <string name="products_title">Ürünler</string>
+    <string name="orders_title">Siparişler</string>
+    <string name="add_product">Ürün Ekle</string>
+    <string name="create_order">Sipariş Oluştur</string>
+    <string name="sku_hint">SKU</string>
+    <string name="product_name_hint">Ürün Adı</string>
+    <string name="quantity_hint">Miktar</string>
+    <string name="rack_code_hint">Raf Kodu</string>
+    <string name="rack_slot_hint">Raf Slotu</string>
+    <string name="package_type_hint">Paket Türü</string>
+    <string name="is_gift">Hediye</string>
+    <string name="order_id_hint">Sipariş ID</string>
+    <string name="customer_name_hint">Müşteri Adı</string>
+    <string name="order_date_hint">Sipariş Tarihi (YYYY-MM-DD)</string>
+    <string name="status_hint">Sipariş Durumu</string>
+    <string name="notes_hint">Notlar</string>
+    <string name="is_return">İade</string>
+</resources>
