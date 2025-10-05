@@ -1,9 +1,14 @@
+package com.mehmet.wmsapp.ui
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.mehmet.wmsapp.R
+import com.mehmet.wmsapp.data.DataManager
+import com.mehmet.wmsapp.data.Order
 
 class OrderFragment : Fragment() {
 
@@ -32,6 +37,11 @@ class OrderFragment : Fragment() {
         spinnerStatus.adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, statusOptions)
 
         btnCreateOrder.setOnClickListener {
+            // Doğrulama
+            if (!validateInputs()) {
+                return@setOnClickListener
+            }
+
             val order = Order(
                 orderId = etOrderId.text.toString(),
                 customerName = etCustomerName.text.toString(),
@@ -41,9 +51,54 @@ class OrderFragment : Fragment() {
                 isReturn = cbIsReturn.isChecked,
                 notes = etNotes.text.toString()
             )
+
+            // Siparişi DataManager'a ekle
+            DataManager.addOrder(order)
+
             Toast.makeText(requireContext(), "Sipariş oluşturuldu:\n$order", Toast.LENGTH_LONG).show()
+
+            // Alanları temizle
+            clearInputs()
         }
 
         return view
+    }
+
+    private fun validateInputs(): Boolean {
+        // Sipariş ID kontrolü
+        if (etOrderId.text.toString().trim().isEmpty()) {
+            etOrderId.error = "Sipariş ID gereklidir"
+            return false
+        }
+
+        // Müşteri adı kontrolü
+        if (etCustomerName.text.toString().trim().isEmpty()) {
+            etCustomerName.error = "Müşteri adı gereklidir"
+            return false
+        }
+
+        // Tarih kontrolü
+        if (etOrderDate.text.toString().trim().isEmpty()) {
+            etOrderDate.error = "Sipariş tarihi gereklidir"
+            return false
+        }
+
+        // Basit tarih formatı kontrolü (YYYY-MM-DD)
+        val datePattern = Regex("\\d{4}-\\d{2}-\\d{2}")
+        if (!datePattern.matches(etOrderDate.text.toString())) {
+            etOrderDate.error = "Tarih formatı YYYY-MM-DD olmalıdır"
+            return false
+        }
+
+        return true
+    }
+
+    private fun clearInputs() {
+        etOrderId.text?.clear()
+        etCustomerName.text?.clear()
+        etOrderDate.text?.clear()
+        etNotes.text?.clear()
+        spinnerStatus.setSelection(0)
+        cbIsReturn.isChecked = false
     }
 }
