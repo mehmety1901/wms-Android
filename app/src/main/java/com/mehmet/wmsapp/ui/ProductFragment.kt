@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import com.mehmet.wmsapp.R
+import com.mehmet.wmsapp.data.DataManager
 import com.mehmet.wmsapp.data.Product
 
 class ProductFragment : Fragment() {
@@ -53,6 +54,9 @@ class ProductFragment : Fragment() {
                 packageType = spinnerPackage.selectedItem.toString(),
                 isGift = cbGift.isChecked
             )
+
+            // Ürünü DataManager'a ekle
+            DataManager.addProduct(product)
 
             Toast.makeText(requireContext(), "Ürün eklendi:\n$product", Toast.LENGTH_LONG).show()
 

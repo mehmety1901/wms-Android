@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import com.mehmet.wmsapp.R
+import com.mehmet.wmsapp.data.DataManager
 import com.mehmet.wmsapp.data.Order
 
 class OrderFragment : Fragment() {
@@ -50,6 +51,10 @@ class OrderFragment : Fragment() {
                 isReturn = cbIsReturn.isChecked,
                 notes = etNotes.text.toString()
             )
+
+            // Siparişi DataManager'a ekle
+            DataManager.addOrder(order)
+
             Toast.makeText(requireContext(), "Sipariş oluşturuldu:\n$order", Toast.LENGTH_LONG).show()
 
             // Alanları temizle
