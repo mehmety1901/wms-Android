@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WMS App</string>
+    
+    <!-- Navigation Menu -->
+    <string name="nav_product">Ürünler</string>
+    <string name="nav_rack">Raflar</string>
+    <string name="nav_order">Siparişler</string>
+    <string name="nav_package">Paketler</string>
+    <string name="nav_shipment">Gönderiler</string>
+    <string name="nav_report">Raporlar</string>
+    
+    <!-- Product Fragment -->
+    <string name="product_title">Ürün Yönetimi</string>
+    <string name="hint_sku">SKU</string>
+    <string name="hint_product_name">Ürün Adı</string>
+    <string name="hint_quantity">Miktar</string>
+    <string name="hint_rack_code">Raf Kodu</string>
+    <string name="hint_rack_slot">Raf Slot No</string>
+    <string name="label_package_type">Paket Türü</string>
+    <string name="cb_gift">Hediye Paketi</string>
+    <string name="btn_add_product">Ürün Ekle</string>
+    
+    <!-- Order Fragment -->
+    <string name="order_title">Sipariş Yönetimi</string>
+    <string name="hint_order_id">Sipariş ID</string>
+    <string name="hint_customer_name">Müşteri Adı</string>
+    <string name="hint_order_date">Sipariş Tarihi (YYYY-MM-DD)</string>
+    <string name="label_order_status">Sipariş Durumu</string>
+    <string name="hint_notes">Notlar</string>
+    <string name="cb_is_return">İade Siparişi</string>
+    <string name="btn_create_order">Sipariş Oluştur</string>
+    
+    <!-- Rack Fragment -->
+    <string name="rack_title">Raf Yönetimi</string>
+    <string name="hint_location">Konum</string>
+    <string name="hint_capacity">Kapasite</string>
+    <string name="hint_current_occupancy">Mevcut Doluluk</string>
+    <string name="btn_add_rack">Raf Ekle</string>
+    
+    <!-- Package Fragment -->
+    <string name="package_title">Paket Yönetimi</string>
+    <string name="hint_package_id">Paket ID</string>
+    <string name="hint_weight">Ağırlık (kg)</string>
+    <string name="hint_dimensions">Boyutlar (örn: 30x20x10)</string>
+    <string name="hint_tracking_number">Takip Numarası</string>
+    <string name="btn_create_package">Paket Oluştur</string>
+    
+    <!-- Shipment Fragment -->
+    <string name="shipment_title">Gönderi Yönetimi</string>
+    <string name="hint_shipment_id">Gönderi ID</string>
+    <string name="hint_carrier">Kargo Şirketi</string>
+    <string name="hint_shipment_date">Gönderi Tarihi (YYYY-MM-DD)</string>
+    <string name="label_shipment_status">Gönderi Durumu</string>
+    <string name="btn_create_shipment">Gönderi Oluştur</string>
+    
+    <!-- Report Fragment -->
+    <string name="report_title">Rapor Oluşturma</string>
+    <string name="label_report_type">Rapor Türü</string>
+    <string name="hint_start_date">Başlangıç Tarihi (YYYY-MM-DD)</string>
+    <string name="hint_end_date">Bitiş Tarihi (YYYY-MM-DD)</string>
+    <string name="btn_generate_report">Rapor Oluştur</string>
+    <string name="label_report_results">Rapor Sonuçları</string>
+    <string name="msg_no_report">Rapor henüz oluşturulmadı</string>
+</resources>

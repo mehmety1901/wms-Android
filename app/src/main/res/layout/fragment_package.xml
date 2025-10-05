@@ -10,7 +10,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Ürün Yönetimi"
+            android:text="Paket Yönetimi"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"
@@ -18,41 +18,17 @@
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/etSku"
-            android:hint="SKU"
+            android:id="@+id/etPackageId"
+            android:hint="Paket ID"
             android:inputType="text"
             android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/etName"
-            android:hint="Ürün Adı"
+            android:id="@+id/etOrderId"
+            android:hint="Sipariş ID"
             android:inputType="text"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/etQuantity"
-            android:hint="Miktar"
-            android:inputType="number"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/etRackCode"
-            android:hint="Raf Kodu"
-            android:inputType="text"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/etRackSlot"
-            android:hint="Raf Slot No"
-            android:inputType="number"
             android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -64,21 +40,38 @@
             android:layout_height="wrap_content" />
 
         <Spinner
-            android:id="@+id/spinnerPackage"
+            android:id="@+id/spinnerPackageType"
             android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <CheckBox
-            android:id="@+id/cbGift"
-            android:text="Hediye Paketi"
+        <EditText
+            android:id="@+id/etWeight"
+            android:hint="Ağırlık (kg)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etDimensions"
+            android:hint="Boyutlar (örn: 30x20x10)"
+            android:inputType="text"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etTrackingNumber"
+            android:hint="Takip Numarası"
+            android:inputType="text"
             android:layout_marginBottom="16dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/btnAddProduct"
-            android:text="Ürün Ekle"
+            android:id="@+id/btnCreatePackage"
+            android:text="Paket Oluştur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

@@ -1,53 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:text="Sipariş Yönetimi"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <EditText
             android:id="@+id/etOrderId"
-            android:hint="Order ID"
+            android:hint="Sipariş ID"
+            android:inputType="text"
+            android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/etCustomerName"
-            android:hint="Customer Name"
+            android:hint="Müşteri Adı"
+            android:inputType="text"
+            android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/etOrderDate"
-            android:hint="Order Date (YYYY-MM-DD)"
+            android:hint="Sipariş Tarihi (YYYY-MM-DD)"
+            android:inputType="date"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Sipariş Durumu"
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Spinner
             android:id="@+id/spinnerStatus"
+            android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/etNotes"
-            android:hint="Notes"
+            android:hint="Notlar"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <CheckBox
             android:id="@+id/cbIsReturn"
-            android:text="Is Return"
+            android:text="İade Siparişi"
+            android:layout_marginBottom="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btnCreateOrder"
-            android:text="Create Order"
+            android:text="Sipariş Oluştur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
-

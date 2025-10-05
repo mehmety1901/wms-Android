@@ -1,9 +1,13 @@
+package com.mehmet.wmsapp.ui
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.mehmet.wmsapp.R
+import com.mehmet.wmsapp.data.Order
 
 class OrderFragment : Fragment() {
 
